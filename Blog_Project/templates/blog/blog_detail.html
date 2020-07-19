@@ -4,11 +4,8 @@
 
 {% block content %} 
 
-
-{% for blog in blogs %}
-    {{ blog.title }}
-    {{ blog.author }}
-    {{ blog.description }}
-{% endfor %}
+    <p>Title: {{ blog.title }}</p>
+    <p>Author: {{ blog.author }}</p>
+    <p>Description: {{ blog.description }}</p>
 
 {% endblock content %}
