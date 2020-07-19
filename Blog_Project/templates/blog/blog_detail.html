@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Individual Blog Details {% endblock title %}
+
+{% block content %} 
+
+
+{% for blog in blogs %}
+    {{ blog.title }}
+    {{ blog.author }}
+    {{ blog.description }}
+{% endfor %}
+
+{% endblock content %}

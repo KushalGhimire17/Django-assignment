@@ -7,3 +7,7 @@ def homepage(request):
 def details(request):
     blogs = Blog.objects.all()
     return render(request, 'blog/detail.html', {'blogs': blogs})
+
+def blog_details(request, id):
+    blogs = Blog.objects.all().get(pk=id)
+    return render(request, 'blog/blog_detail.html', {'blogs': blogs})
