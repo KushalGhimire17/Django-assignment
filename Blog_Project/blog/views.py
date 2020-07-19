@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Blog
 
 def homepage(request):
     return render(request, 'blog/home.html')
 
 def details(request):
-    return HttpResponse("Details here")
+    blogs = Blog.objects.all()
+    return render(request, 'blog/detail.html', {'blogs': blogs})

@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Blog Details {% endblock title %}
+
+{% block content %} 
+<h1> Welcome to the details page </h1>
+
+
+{% for blog in blogs %}
+    <a href="">{{ blog }}</a>
+{% endfor %}
+
+{% endblock content %}
